@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Reactive Driven Form</h1>
+    <form [formGroup] = "loginForm">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('email')?.untouched">*</span>
+            <input type="email" required class="form-control" formControlName = "email" placeholder="Enter email"
+                name="email">
+            <span class="text text-danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"> Email id Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('email')?.valid && loginForm.get('email')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="pass">Password:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('pass')?.untouched">*</span>
+            <input type="password" required class="form-control" formControlName = "pass" placeholder="Enter pass"
+                name="pass">
+            <span class="text text-danger" *ngIf="loginForm.get('pass')?.invalid && loginForm.get('pass')?.touched"> Password is Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('pass')?.valid && loginForm.get('pass')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="username">User Name:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('username')?.untouched">*</span>
+            <input type="username" required class="form-control" formControlName = "username" placeholder="Enter username"
+                name="username">
+            <span class="text text-danger" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"> Username is Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('username')?.valid && loginForm.get('username')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="street">Street:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('street')?.untouched">*</span>
+            <input type="street" required class="form-control" formControlName = "street" placeholder="Enter street"
+                name="street">
+            <span class="text text-danger" *ngIf="loginForm.get('street')?.invalid && loginForm.get('street')?.touched"> Street is Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('street')?.valid && loginForm.get('street')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('state')?.untouched">*</span>
+            <input type="state" required class="form-control" formControlName = "state" placeholder="Enter state"
+                name="state">
+            <span class="text text-danger" *ngIf="loginForm.get('state')?.invalid && loginForm.get('state')?.touched"> State is Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('state')?.valid && loginForm.get('state')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('city')?.untouched">*</span>
+            <input type="city" required class="form-control" formControlName = "city" placeholder="Enter city"
+                name="city">
+            <span class="text text-danger" *ngIf="loginForm.get('city')?.invalid && loginForm.get('city')?.touched"> City is Requried </span>
+            <span class="text text-success" *ngIf="loginForm.get('city')?.valid && loginForm.get('city')?.touched"> Success....</span>
+        </div>
+        <div class="form-group">
+            <label for="pincode">Pin Code:</label>
+            <span class="text text-danger" *ngIf="loginForm.get('pincode')?.untouched">*</span>
+            <input type="pincode" required class="form-control" formControlName = "pincode" placeholder="Enter pincode"
+                name="pincode">
+            <span class="text text-danger" *ngIf="loginForm.get('pincode')?.invalid && loginForm.get('pincode')?.touched"> Pincode is six letters </span>
+            <span class="text text-success" *ngIf="loginForm.get('pincode')?.valid && loginForm.get('pincode')?.touched"> Success....</span>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
